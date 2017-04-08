@@ -95,10 +95,8 @@ $(() => {
 	let hash = window.location.hash;
 	let token;
 	let userID;
-	if (!~hash.indexOf("access_token") && !~hash.indexOf("user_id")) {
 		token = hash.split("=")[0];
-		userID = hash.split("=")[2];
-	}
+		userID = hash.split("=")[2];ss
 
 	$.ajax({
 		type: 'POST',
