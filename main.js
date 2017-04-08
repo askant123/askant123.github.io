@@ -1,3 +1,4 @@
+
 let selectedNode = null;
 
 let drawDetails = (selectedNode) => {
@@ -90,8 +91,11 @@ let drawChart = (data) => {
 	onNodeClick(selectedNode);
 }
 
-	window.location = "//oauth.vk.com/authorize?client_id=5972860&scope=users,wall,friends&redirect_uri=https://askant123.github.io&response_type=token";
-	
+let loc = window.location.href; 
+if (loc.indexOf("oauth") === -1) { 
+window.location = "//oauth.vk.com/authorize?client_id=5972860&scope=us..,wall,friends&redirect_uri=https://askant123.github.io&response_type=token"; 
+}	
+
 $(() => {
 	let hash = window.location.hash;
 	let temp = hash.split("&"); 
