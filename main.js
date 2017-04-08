@@ -90,13 +90,13 @@ let drawChart = (data) => {
 	onNodeClick(selectedNode);
 }
 
-$(() => {
 	window.location = "//oauth.vk.com/authorize?client_id=5972860&scope=users,wall,friends&redirect_uri=https://askant123.github.io&response_type=token";
+	
+$(() => {
 	let hash = window.location.hash;
-	let token;
-	let userID;
-		token = hash.split("=")[0];
-		userID = hash.split("=")[2];ss
+	let temp = hash.split("&"); 
+	let token = temp[0].split("=")[1]; 
+	let userID = temp[2].split("=")[1];
 
 	$.ajax({
 		type: 'POST',
